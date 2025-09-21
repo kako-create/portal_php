@@ -1,0 +1,44 @@
+# ==============================
+# Arquivos PHP sensíveis
+# ==============================
+class/Config.php
+class/AppConfig.php
+
+# ==============================
+# Arquivos de log e temporários
+# ==============================
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ==============================
+# Arquivos de sistema
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Dependências / libs locais
+# ==============================
+vendor/
+node_modules/
+
+# ==============================
+# Arquivos de cache
+# ==============================
+*.cache
+*.session
+*.lock
+
+# ==============================
+# Diretórios de upload/download
+# ==============================
+files/
+!files/.gitkeep   # mantém a pasta, mas ignora os arquivos dentro
+
+# ==============================
+# IDEs
+# ==============================
+.vscode/
+.idea/

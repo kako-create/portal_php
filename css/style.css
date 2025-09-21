@@ -1,0 +1,144 @@
+/* ====== RESET BÁSICO ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding: 0px;
+  background: #fff;
+  text-align: left;
+}
+
+.logo img {
+  display: block;
+  max-height: 100px;
+  height: auto;
+  width: auto;
+}
+
+#conteudo {
+  flex: 1; /* ocupa o espaço restante */
+  padding: 20px;
+  background: #f7f7f7;
+}
+
+footer {
+  background: #333; /* cor de fundo */
+  color: #fff; /* texto branco */
+  text-align: center; /* centraliza conteúdo */
+  padding: 15px 10px; /* altura confortável */
+  font-size: 14px; /* tamanho do texto */
+  margin-top: auto; /* empurra para o fim no layout flex */
+}
+
+footer p {
+  margin: 0; /* remove espaçamento extra */
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* ===== MENU PRINCIPAL ===== */
+#menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #333;
+  display: flex; /* raiz lado a lado */
+}
+
+#menu > li {
+  position: relative;
+}
+
+#menu > li > a {
+  display: block;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#menu > li > a:hover {
+  background: #444;
+}
+
+/* ===== SUBMENUS ===== */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffe0; /* bege claro */
+  border: 1px solid #ccc;
+  list-style: none;
+  min-width: 220px;
+  z-index: 1000;
+}
+
+.submenu li {
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+
+.submenu li:last-child {
+  border-bottom: none;
+}
+
+.submenu li a {
+  display: block;
+  padding: 6px 12px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background: #f5f5b5; /* hover amarelado */
+}
+
+/* ===== SUB-SUBMENUS ===== */
+.submenu li ul.submenu {
+  top: 0;
+  left: 100%;
+  margin-left: 1px;
+  border: 1px solid #ccc;
+  background: #ffffe0;
+}
+
+/* ===== INDICADORES ===== */
+#menu > li:has(ul.submenu) > a::after {
+  content: " ▼";
+  font-size: 0.7em;
+}
+
+.submenu li:has(ul.submenu) > a::after {
+  content: " ►";
+  float: right;
+  font-size: 0.7em;
+}
