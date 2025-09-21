@@ -3,9 +3,9 @@ require_once (__DIR__ . "/bootstrap.php");
 
 // Pastas permitidas
 $pastasPermitidas = [
-    "isentos"    => BASE_PATH . "/adm/files/isentos",
-    "recursos"   => BASE_PATH . "/adm/files/recursos",
-    "relatorios" => BASE_PATH . "/adm/files/relatorios",
+    "isentos"    => FILES_PATH . "/isentos",
+    "recursos"   => FILES_PATH . "/recursos",
+    "relatorios" => FILES_PATH . "/relatorios",
 ];
 
 // Parâmetros

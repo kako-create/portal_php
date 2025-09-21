@@ -1,9 +1,9 @@
 <?php
-require_once(__DIR__ . "/../bootstrap.php");
+require_once(BASE_PATH . "/bootstrap.php");
 
 // Pasta fixa deste módulo
 $tipo = "isentos";
-$path = BASE_PATH . "/adm/files/$tipo";
+$path = FILES_PATH . "/$tipo";
 
 if (!is_dir($path)) {
     echo "<p>Pasta não encontrada.</p>";
@@ -13,7 +13,7 @@ if (!is_dir($path)) {
 $files = scandir($path);
 
 echo "<h2>Arquivos disponíveis - " . ucfirst($tipo) . "</h2>";
-echo "<table border='1' cellpadding='6' cellspacing='0'>";
+echo "<table class='table-arquivos'>";
 echo "<tr><th>Arquivo</th><th>Abrir</th><th>Download</th></tr>";
 
 foreach ($files as $file) {
@@ -22,8 +22,8 @@ foreach ($files as $file) {
     $safeFile = urlencode($file);
 
     // Links: o tipo é fixo -> "isentos"
-    $urlAbrir    = "adm/download.php?tipo=$tipo&file=$safeFile";
-    $urlDownload = "adm/download.php?tipo=$tipo&file=$safeFile&download=1";
+    $urlAbrir    = BASE_URL . "/download.php?tipo=$tipo&file=$safeFile";
+    $urlDownload = BASE_URL . "/download.php?tipo=$tipo&file=$safeFile&download=1";
 
     echo "<tr>";
     echo "<td>$file</td>";
