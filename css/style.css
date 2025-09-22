@@ -176,3 +176,15 @@ body {
 .table-arquivos a:hover {
   text-decoration: underline;
 }
+
+.table-arquivos tr:nth-child(even) {
+  background-color: #f9f9f9; /* cinza claro */
+}
+
+.table-arquivos tr:nth-child(odd) {
+  background-color: #ffffff; /* branco */
+}
+
+.table-arquivos tr:hover {
+  background-color: #f1f1f1; /* um pouco mais escuro ao passar o mouse */
+}

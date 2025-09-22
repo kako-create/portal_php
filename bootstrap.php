@@ -7,6 +7,7 @@ define("CLASS_PATH", BASE_PATH . "/class");
 define("INCLUDE_PATH", BASE_PATH . "/includes");
 define("MODULE_PATH", BASE_PATH . "/modules");
 define('FILES_PATH', BASE_PATH . '/files');
+define('FPDF_PATH', BASE_PATH . '/libs/fpdf');
 
 // Detecta host e protocolo
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";

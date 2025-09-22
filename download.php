@@ -9,16 +9,16 @@ $pastasPermitidas = [
 ];
 
 // Parâmetros
-$tipo    = $_GET['tipo'] ?? null;
-$arquivo = $_GET['file'] ?? null;
+$tipo = isset($_GET['tipo']) ? $_GET['tipo'] : '';
+$file = isset($_GET['file']) ? $_GET['file'] : '';
 
-if (!$tipo || !$arquivo || !isset($pastasPermitidas[$tipo])) {
+if (!$tipo || !$file || !isset($pastasPermitidas[$tipo])) {
     http_response_code(400);
     exit("Parâmetros inválidos.");
 }
 
 $baseDir = realpath($pastasPermitidas[$tipo]);
-$arquivoSeguro = basename($arquivo);
+$arquivoSeguro = basename($file);
 $caminho = realpath($baseDir . "/" . $arquivoSeguro);
 
 // Segurança
