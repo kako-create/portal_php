@@ -21,10 +21,14 @@ include_once(INCLUDE_PATH . "/functions.php");
 <?php
 renderLogo();
 $result = $db->callProcedure("sp_get_menu", ["adm"]);
+
 $tree = [];
 while ($row = $db->fetch($result)) {
     $tree[$row['cd_menu_parent']][] = $row;
 }
+$db->freeResult($result);
+$db->clearResults();
+
 echo buildMenu($tree);
 ?>
 <hr>

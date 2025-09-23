@@ -8,10 +8,12 @@ define("INCLUDE_PATH", BASE_PATH . "/includes");
 define("MODULE_PATH", BASE_PATH . "/modules");
 define('FILES_PATH', BASE_PATH . '/files');
 define('FPDF_PATH', BASE_PATH . '/libs/fpdf');
+define("IMAGE_PATH", dirname(BASE_PATH) . "/imagens");
 
 // Detecta host e protocolo
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 $host     = $_SERVER['HTTP_HOST'];
+
 // Caminho da pasta "adm" (onde o bootstrap está)
 $dir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
 $dir = preg_replace('#/modules.*$#', '', $dir); // se rodar módulo, remove o sufixo
